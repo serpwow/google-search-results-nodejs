@@ -1,6 +1,6 @@
 {
   "name": "google-search-results-serpwow",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Google Search Results Node JS API via SerpWow.com",
   "main": "dist/index.js",
   "scripts": {
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/serpwow/google-search-results-nodejs/issues"
   },
-  "homepage": "https://github.com/serpwow/google-search-results-nodejs",
+  "homepage": "https://github.com/serpwow/google-search-results-nodejs#readme",
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
