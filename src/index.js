@@ -96,7 +96,6 @@ function createUrlFromEndpointAndOptions (endpoint, options, apiKey, output) {
   const query = qs.stringify(o);
   const baseURL = `${host}${endpoint}`;
   var r = query ? `${baseURL}?${query}` : baseURL;
-  console.log('** ' + r);
   return r;
 }
 

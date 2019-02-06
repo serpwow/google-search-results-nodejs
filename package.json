@@ -1,12 +1,12 @@
 {
-  "name": "google-search-results-nodejs",
-  "version": "0.0.1",
+  "name": "google-search-results-serpwow",
+  "version": "0.0.2",
   "description": "Google Search Results Node JS API via SerpWow.com",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha",
     "build": "babel src --out-dir dist",
-    "deploy": "npm publish"
+    "deploy": "npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/serpwow/google-search-results-nodejs/issues"
   },
-  "homepage": "https://github.com/serpwow/google-search-results-nodejs#readme",
+  "homepage": "https://github.com/serpwow/google-search-results-nodejs",
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/polyfill": "^7.0.0",

@@ -240,7 +240,6 @@ function createUrlFromEndpointAndOptions(endpoint, options, apiKey, output) {
   var query = qs.stringify(o);
   var baseURL = "".concat(host).concat(endpoint);
   var r = query ? "".concat(baseURL, "?").concat(query) : baseURL;
-  console.log('** ' + r);
   return r;
 }
 
