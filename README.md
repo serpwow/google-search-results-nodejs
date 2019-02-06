@@ -6,13 +6,13 @@ This Node.JS module allows you to scrape and parse Google Search Results using [
 You can install google-search-results-serpwow with:
 
 ```shell
-$ pip install google-search-results-serpwow
+$ npm i google-search-results-serpwow
 ```
 
-and upgrade with:
+and update with:
 
 ```shell
-$ pip install google-search-results-serpwow --upgrade
+$ npm update google-search-results-serpwow
 ```
 
 ## Documentation
