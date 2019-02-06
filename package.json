@@ -1,0 +1,58 @@
+{
+  "name": "google-search-results-nodejs",
+  "version": "0.0.1",
+  "description": "Google Search Results Node JS API via SerpWow.com",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "babel src --out-dir dist",
+    "deploy": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serpwow/google-search-results-nodejs.git"
+  },
+  "keywords": [
+    "google",
+    "search",
+    "scrape",
+    "api",
+    "query",
+    "json",
+    "html",
+    "image",
+    "automated",
+    "localization",
+    "serp",
+    "serpapi",
+    "serpwow",
+    "proxy",
+    "proxies",
+    "image",
+    "news",
+    "shopping",
+    "videos",
+    "seo"
+  ],
+  "author": "SerpWow hello@serpwow.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serpwow/google-search-results-nodejs/issues"
+  },
+  "homepage": "https://github.com/serpwow/google-search-results-nodejs#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^7.1.5",
+    "dotenv": "^5.0.0",
+    "mocha": "^5.2.0",
+    "should": "^11.1.1"
+  }
+}
