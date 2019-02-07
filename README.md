@@ -294,7 +294,7 @@ serpwow.html(params)
     console.log(error);
   });
 
-// retrieve the Google search results as HTML
+// retrieve the Google search results as CSV
 serpwow.csv(params)
   .then(result => {
     // print the result CSV string
@@ -402,7 +402,7 @@ var SerpWow = require('google-search-results-serpwow')
 // create the serpwow object, passing in our API key
 let serpwow = new SerpWow('demo')
 
-// request 
+// set number of results 
 let numberOfResults = 100;
 
 // request the first 100 results
