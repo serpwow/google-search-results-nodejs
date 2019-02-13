@@ -127,5 +127,3 @@ function httpGet(url, options, cb, type) {
 }
 
 module.exports = SerpWow;
-
-
