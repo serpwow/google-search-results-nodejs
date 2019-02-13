@@ -58,7 +58,7 @@ let serpwow = new SerpWow('demo')
 async function getResult() {
 
   let result = await serpwow.json({
-    q: 'mumbai city center'
+    q: 'pizza'
   });
   
   // pretty-print the result
@@ -71,7 +71,7 @@ getResult();
 // #2. example using callbacks
 serpwow.json(
   {
-    q: 'new york city center'
+    q: 'pizza'
   })
   .then(result => {
     // pretty-print the result
@@ -202,7 +202,7 @@ serpwow.json(
 ## Searching Google Places, Google Videos, Google Images, Google Shopping and Google News
 Use the ``search_type`` param to search Google Places, Videos, Images and News. See the [Search API Parameters Docs](https://serpwow.com/docs/search/parameters) for full details of the additional params available for each search type.
 ```javascript
-// perform a search on Google News, just looking at blogs, filtering out duplicates, ordered by date, in the last month
+// perform a search on Google News, just looking at blogs, filtering out duplicates, ordered by date, in the last tear
 serpwow.json(
   {
     q: 'football news',
@@ -210,7 +210,7 @@ serpwow.json(
     news_type: 'blogs',
     show_duplicates: 'false',
     sort_by: 'date',
-    time_period: 'last_month'
+    time_period: 'last_year'
   })
   .then(result => {
     // pretty-print the result
