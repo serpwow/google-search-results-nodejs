@@ -8,7 +8,7 @@ All methods support promises and node-style callbacks.
 You can install google-search-results-serpwow with:
 
 ```shell
-$ npm i google-search-results-serpwow
+$ npm install google-search-results-serpwow
 ```
 
 and update with:
