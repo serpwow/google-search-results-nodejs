@@ -167,6 +167,216 @@ function () {
       var url = createUrlFromEndpointAndOptions('/live/account', {}, API_KEY);
       return httpGet(url, options, cb, 'json');
     }
+  }, {
+    key: "createBatch",
+    value: function createBatch() {
+      for (var _len6 = arguments.length, args = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+        args[_key6] = arguments[_key6];
+      }
+
+      var _splitArgsIntoOptions6 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions6.params,
+          options = _splitArgsIntoOptions6.options,
+          cb = _splitArgsIntoOptions6.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches', {}, API_KEY);
+      return httpPost(url, params, cb, 'json');
+    }
+  }, {
+    key: "updateBatch",
+    value: function updateBatch() {
+      for (var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
+        args[_key7] = arguments[_key7];
+      }
+
+      var _splitArgsIntoOptions7 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions7.params,
+          options = _splitArgsIntoOptions7.options,
+          cb = _splitArgsIntoOptions7.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+      return httpPut(url, args[1], cb, 'json');
+    }
+  }, {
+    key: "startBatch",
+    value: function startBatch() {
+      for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+        args[_key8] = arguments[_key8];
+      }
+
+      var _splitArgsIntoOptions8 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions8.params,
+          options = _splitArgsIntoOptions8.options,
+          cb = _splitArgsIntoOptions8.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/start', {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "deleteBatch",
+    value: function deleteBatch() {
+      for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
+        args[_key9] = arguments[_key9];
+      }
+
+      var _splitArgsIntoOptions9 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions9.params,
+          options = _splitArgsIntoOptions9.options,
+          cb = _splitArgsIntoOptions9.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+      return httpDelete(url, options, cb, 'json');
+    }
+  }, {
+    key: "getBatch",
+    value: function getBatch() {
+      for (var _len10 = arguments.length, args = new Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
+        args[_key10] = arguments[_key10];
+      }
+
+      var _splitArgsIntoOptions10 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions10.params,
+          options = _splitArgsIntoOptions10.options,
+          cb = _splitArgsIntoOptions10.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "listBatches",
+    value: function listBatches() {
+      for (var _len11 = arguments.length, args = new Array(_len11), _key11 = 0; _key11 < _len11; _key11++) {
+        args[_key11] = arguments[_key11];
+      }
+
+      var _splitArgsIntoOptions11 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions11.params,
+          options = _splitArgsIntoOptions11.options,
+          cb = _splitArgsIntoOptions11.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches', {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "updateBatchSearch",
+    value: function updateBatchSearch() {
+      for (var _len12 = arguments.length, args = new Array(_len12), _key12 = 0; _key12 < _len12; _key12++) {
+        args[_key12] = arguments[_key12];
+      }
+
+      var _splitArgsIntoOptions12 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions12.params,
+          options = _splitArgsIntoOptions12.options,
+          cb = _splitArgsIntoOptions12.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/' + args[1], {}, API_KEY);
+      return httpPut(url, args[2], cb, 'json');
+    }
+  }, {
+    key: "deleteBatchSearch",
+    value: function deleteBatchSearch() {
+      for (var _len13 = arguments.length, args = new Array(_len13), _key13 = 0; _key13 < _len13; _key13++) {
+        args[_key13] = arguments[_key13];
+      }
+
+      var _splitArgsIntoOptions13 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions13.params,
+          options = _splitArgsIntoOptions13.options,
+          cb = _splitArgsIntoOptions13.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/' + args[1], {}, API_KEY);
+      return httpDelete(url, options, cb, 'json');
+    }
+  }, {
+    key: "listBatchSearches",
+    value: function listBatchSearches() {
+      for (var _len14 = arguments.length, args = new Array(_len14), _key14 = 0; _key14 < _len14; _key14++) {
+        args[_key14] = arguments[_key14];
+      }
+
+      var _splitArgsIntoOptions14 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions14.params,
+          options = _splitArgsIntoOptions14.options,
+          cb = _splitArgsIntoOptions14.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/' + args[1], {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "listAllBatchSearchesAsJSON",
+    value: function listAllBatchSearchesAsJSON() {
+      for (var _len15 = arguments.length, args = new Array(_len15), _key15 = 0; _key15 < _len15; _key15++) {
+        args[_key15] = arguments[_key15];
+      }
+
+      var _splitArgsIntoOptions15 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions15.params,
+          options = _splitArgsIntoOptions15.options,
+          cb = _splitArgsIntoOptions15.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/json', {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "listAllBatchSearchesAsCSV",
+    value: function listAllBatchSearchesAsCSV() {
+      for (var _len16 = arguments.length, args = new Array(_len16), _key16 = 0; _key16 < _len16; _key16++) {
+        args[_key16] = arguments[_key16];
+      }
+
+      var _splitArgsIntoOptions16 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions16.params,
+          options = _splitArgsIntoOptions16.options,
+          cb = _splitArgsIntoOptions16.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/csv', {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "listBatchResultSets",
+    value: function listBatchResultSets() {
+      for (var _len17 = arguments.length, args = new Array(_len17), _key17 = 0; _key17 < _len17; _key17++) {
+        args[_key17] = arguments[_key17];
+      }
+
+      var _splitArgsIntoOptions17 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions17.params,
+          options = _splitArgsIntoOptions17.options,
+          cb = _splitArgsIntoOptions17.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "getBatchResultSet",
+    value: function getBatchResultSet() {
+      for (var _len18 = arguments.length, args = new Array(_len18), _key18 = 0; _key18 < _len18; _key18++) {
+        args[_key18] = arguments[_key18];
+      }
+
+      var _splitArgsIntoOptions18 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions18.params,
+          options = _splitArgsIntoOptions18.options,
+          cb = _splitArgsIntoOptions18.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results/' + args[1], {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "getBatchResultSetAsCSV",
+    value: function getBatchResultSetAsCSV() {
+      for (var _len19 = arguments.length, args = new Array(_len19), _key19 = 0; _key19 < _len19; _key19++) {
+        args[_key19] = arguments[_key19];
+      }
+
+      var _splitArgsIntoOptions19 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions19.params,
+          options = _splitArgsIntoOptions19.options,
+          cb = _splitArgsIntoOptions19.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results/' + args[1] + '/csv', {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
   }]);
 
   return SerpWow;
@@ -254,6 +464,126 @@ function httpGet(url, options, cb, type) {
     var _ref2 = _slicedToArray(_ref, 2),
         res = _ref2[0],
         body = _ref2[1];
+
+    if (res.ok) {
+      if (type === 'json') {
+        body = JSON.parse(body);
+      }
+
+      if (useCallback) return cb(null, body);
+      return body;
+    } else {
+      var e = {
+        code: res.status,
+        status: res.statusText
+      };
+
+      try {
+        e.message = JSON.parse(body).request_info.message;
+      } catch (inner) {}
+
+      throw new SerpWowError(e);
+    }
+  }).catch(function (err) {
+    if (useCallback) return cb(err);
+    throw err;
+  });
+}
+
+function httpPost(url, body, cb, type) {
+  var useCallback = 'function' === typeof cb;
+  var reqOptions = {
+    method: 'post',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  return fetch(url, reqOptions).then(function (res) {
+    return Promise.all([res, res.text()]);
+  }).then(function (_ref3) {
+    var _ref4 = _slicedToArray(_ref3, 2),
+        res = _ref4[0],
+        body = _ref4[1];
+
+    if (res.ok) {
+      if (type === 'json') {
+        body = JSON.parse(body);
+      }
+
+      if (useCallback) return cb(null, body);
+      return body;
+    } else {
+      var e = {
+        code: res.status,
+        status: res.statusText
+      };
+
+      try {
+        e.message = JSON.parse(body).request_info.message;
+      } catch (inner) {}
+
+      throw new SerpWowError(e);
+    }
+  }).catch(function (err) {
+    if (useCallback) return cb(err);
+    throw err;
+  });
+}
+
+function httpPut(url, body, cb, type) {
+  var useCallback = 'function' === typeof cb;
+  var reqOptions = {
+    method: 'put',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  return fetch(url, reqOptions).then(function (res) {
+    return Promise.all([res, res.text()]);
+  }).then(function (_ref5) {
+    var _ref6 = _slicedToArray(_ref5, 2),
+        res = _ref6[0],
+        body = _ref6[1];
+
+    if (res.ok) {
+      if (type === 'json') {
+        body = JSON.parse(body);
+      }
+
+      if (useCallback) return cb(null, body);
+      return body;
+    } else {
+      var e = {
+        code: res.status,
+        status: res.statusText
+      };
+
+      try {
+        e.message = JSON.parse(body).request_info.message;
+      } catch (inner) {}
+
+      throw new SerpWowError(e);
+    }
+  }).catch(function (err) {
+    if (useCallback) return cb(err);
+    throw err;
+  });
+}
+
+function httpDelete(url, cb, type) {
+  var useCallback = 'function' === typeof cb;
+  var reqOptions = {
+    method: 'delete',
+    headers: {}
+  };
+  return fetch(url, reqOptions).then(function (res) {
+    return Promise.all([res, res.text()]);
+  }).then(function (_ref7) {
+    var _ref8 = _slicedToArray(_ref7, 2),
+        res = _ref8[0],
+        body = _ref8[1];
 
     if (res.ok) {
       if (type === 'json') {
