@@ -1,6 +1,6 @@
 # Google Search Results in Node.JS
 
-This Node.JS module allows you to scrape and parse Google Search Results using [SerpWow](https://serpwow.com). In addition to [Search](https://serpwow.com/docs/search/overview) you can also use this module to access the SerpWow [Locations API](https://serpwow.com/docs/locations/overview), [Batches API](https://serpwow.com/docs/batches/overview) and [Account API](https://serpwow.com/docs/account).
+This Node.JS module allows you to scrape and parse Google Search Results using [SerpWow](https://serpwow.com). In addition to [Search](https://serpwow.com/docs/search-api/overview) you can also use this module to access the SerpWow [Locations API](https://serpwow.com/docs/locations-api/overview), [Batches API](https://serpwow.com/docs/batches-api/overview) and [Account API](https://serpwow.com/docs/account-api).
 
 All methods support promises and node-style callbacks.
 
@@ -21,10 +21,10 @@ View package on [npmjs.com](https://www.npmjs.com/package/google-search-results-
 
 ## Documentation
 We have included examples here but full SerpWow API documentation is available at the [API Docs](https://serpwow.com/docs):
-- [Search API Docs](https://serpwow.com/docs/search/overview) 
-- [Locations API Docs](https://serpwow.com/docs/locations/overview) 
-- [Account API Docs](https://serpwow.com/docs/account)
-- [Batches API Docs](https://serpwow.com/docs/batches)
+- [Search API Docs](https://serpwow.com/docs/search-api/overview) 
+- [Locations API Docs](https://serpwow.com/docs/locations-api/overview) 
+- [Account API Docs](https://serpwow.com/docs/account-api)
+- [Batches API Docs](https://serpwow.com/docs/batches-api)
 
 You can also use the [API Playground](https://app.serpwow.com/playground) to visually build Google search requests using SerpWow.
 
@@ -86,7 +86,7 @@ serpwow.json(
 ```
 
 ## Example Response
-A snapshot (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search/results/overview).
+A snapshot (shortened for brevity) of the JSON response returned is shown below. For details of all of the fields from the Google search results page that are parsed please see the [docs](https://serpwow.com/docs/search-api/results/overview).
 ```json
 {
   "request_info": {
@@ -202,7 +202,7 @@ serpwow.json(
 ```
 
 ## Searching Google Places, Google Videos, Google Images, Google Shopping and Google News
-Use the ``search_type`` param to search Google Places, Videos, Images and News. See the [Search API Parameters Docs](https://serpwow.com/docs/search/parameters) for full details of the additional params available for each search type.
+Use the ``search_type`` param to search Google Places, Videos, Images and News. See the [Search API Parameters Docs](https://serpwow.com/docs/search-api/searches/parameters) for full details of the additional params available for each search type.
 ```javascript
 // perform a search on Google News, just looking at blogs, filtering out duplicates, ordered by date, in the last tear
 serpwow.json(
@@ -258,7 +258,7 @@ serpwow.json(
 ```
 
 ## Returning results as JSON, HTML and CSV
-SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html`` and ``csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search/csvfields)) to request specific result fields.
+SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html`` and ``csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search-api/searches/csv-fields)) to request specific result fields.
 ```javascript
 var SerpWow = require('google-search-results-serpwow')
 
@@ -461,7 +461,7 @@ serpwow.csv({
 
 
 ## Locations API Example
-The [Locations API](https://serpwow.com/docs/locations/overview) allows you to search for SerpWow supported Google search locations. You can supply the ``full_name`` returned by the Locations API as the ``location`` parameter in a Search API query (see [Searching with a location](https://github.com/serpwow/google-search-results-python#searching-with-a-location) example above) to retrieve search results geo-located to that location.
+The [Locations API](https://serpwow.com/docs/locations-api/overview) allows you to search for SerpWow supported Google search locations. You can supply the ``full_name`` returned by the Locations API as the ``location`` parameter in a Search API query (see [Searching with a location](https://github.com/serpwow/google-search-results-python#searching-with-a-location) example above) to retrieve search results geo-located to that location.
 ```javascript
 var SerpWow = require('google-search-results-serpwow')
 
@@ -484,7 +484,7 @@ serpwow.locations({
 ```
 
 ## Account API Example
-The [Account API](https://serpwow.com/docs/account) allows you to check your current SerpWow usage and billing information. 
+The [Account API](https://serpwow.com/docs/account-api) allows you to check your current SerpWow usage and billing information. 
 ```javascript
 var SerpWow = require('google-search-results-serpwow')
 
@@ -505,6 +505,6 @@ serpwow.account()
 ```
 
 ## Batches API
-The [Batches API](https://serpwow.com/docs/batches) allows you to create, update and delete Batches on your SerpWow account (Batches allow you to save up to 10,000 Searches and have SerpWow run them on a schedule).
+The [Batches API](https://serpwow.com/docs/batches-api) allows you to create, update and delete Batches on your SerpWow account (Batches allow you to save up to 10,000 Searches and have SerpWow run them on a schedule).
 
-For more information and extensive code samples please see the [Batches API Docs](https://serpwow.com/docs/batches).
+For more information and extensive code samples please see the [Batches API Docs](https://serpwow.com/docs/batches-api).
