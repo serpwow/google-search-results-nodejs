@@ -505,6 +505,6 @@ serpwow.account()
 ```
 
 ## Batches API
-The [Batches API](https://serpwow.com/docs/batches-api) allows you to create, update and delete Batches on your SerpWow account (Batches allow you to save up to 10,000 Searches and have SerpWow run them on a schedule).
+The [Batches API](https://serpwow.com/docs/batches-api) allows you to create, update and delete Batches on your SerpWow account (Batches allow you to save up to 15,000 Searches and have SerpWow run them on a schedule).
 
 For more information and extensive code samples please see the [Batches API Docs](https://serpwow.com/docs/batches-api).
