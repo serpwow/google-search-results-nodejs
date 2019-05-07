@@ -397,7 +397,7 @@ serpwow.json({
 ```
 
 ## Paginating results, returning up to 100 results per page
-Use the ``start`` and ``num`` parameters to paginate through Google search results. ``start`` is 0-based. The maximum number of results returned per page (controlled by the ``num`` param) is 100 (a Google-imposed limitation) for all ``search_type``'s apart from Google Places, where the maximum is 20. Here's an example.
+Use the ``page`` and ``num`` parameters to paginate through Google search results. The maximum number of results returned per page (controlled by the ``num`` param) is 100 (a Google-imposed limitation) for all ``search_type``'s apart from Google Places, where the maximum is 20. Here's an example.
 ```javascript
 var SerpWow = require('google-search-results-serpwow')
 
@@ -410,7 +410,7 @@ let numberOfResults = 100;
 // request the first 100 results
 serpwow.json({
     q: 'pizza',
-    start: 0,
+    page: 1,
     num: numberOfResults
   })
   .then(result => {
@@ -445,7 +445,7 @@ serpwow.csv({
     time_period_max: '02/08/2019',
     device: 'mobile',
     csv_fields: 'search.q,organic_results.position,organic_results.domain',
-    start: '0',
+    page: '1',
     num: '100'
   })
   .then(result => {
