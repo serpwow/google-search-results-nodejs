@@ -103,6 +103,12 @@ class SerpWow {
     return httpGet(url, options, cb, 'json');
   }
 
+  findBatchSearches (...args) {
+    const { params, options, cb } = splitArgsIntoOptionsAndCallback(args);
+    const url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/' + args[1], {}, API_KEY, null, { q: args[2] });
+    return httpGet(url, options, cb, 'json');
+  }
+
   listAllBatchSearchesAsJSON (...args) {
     const { params, options, cb } = splitArgsIntoOptionsAndCallback(args);
     const url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/json', {}, API_KEY);
@@ -167,7 +173,7 @@ function splitArgsIntoOptionsAndCallback (args) {
   return { params, options, cb };
 }
 
-function createUrlFromEndpointAndOptions (endpoint, options, apiKey, output) {
+function createUrlFromEndpointAndOptions (endpoint, options, apiKey, output, qsArgs) {
   var o = {};
   if (options != null) {
     o = JSON.parse(JSON.stringify(options));
@@ -176,6 +182,11 @@ function createUrlFromEndpointAndOptions (endpoint, options, apiKey, output) {
   o.source = 'nodejs';
   if (output != null) {
     o.output = output;
+  }
+  if (qsArgs != null) {
+    for (let argName of Object.keys(qsArgs)) {
+      o[argName] = qsArgs[argName];
+    }
   }
   const query = qs.stringify(o);
   const baseURL = `${host}${endpoint}`;
