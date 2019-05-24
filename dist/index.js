@@ -8,6 +8,8 @@ require("core-js/modules/es6.array.is-array");
 
 require("core-js/modules/es6.promise");
 
+require("core-js/modules/es6.object.keys");
+
 require("core-js/modules/es7.symbol.async-iterator");
 
 require("core-js/modules/es6.symbol");
@@ -303,8 +305,8 @@ function () {
       return httpGet(url, options, cb, 'json');
     }
   }, {
-    key: "listAllBatchSearchesAsJSON",
-    value: function listAllBatchSearchesAsJSON() {
+    key: "findBatchSearches",
+    value: function findBatchSearches() {
       for (var _len15 = arguments.length, args = new Array(_len15), _key15 = 0; _key15 < _len15; _key15++) {
         args[_key15] = arguments[_key15];
       }
@@ -314,12 +316,14 @@ function () {
           options = _splitArgsIntoOptions15.options,
           cb = _splitArgsIntoOptions15.cb;
 
-      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/json', {}, API_KEY);
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/' + args[1], {}, API_KEY, null, {
+        q: args[2]
+      });
       return httpGet(url, options, cb, 'json');
     }
   }, {
-    key: "listAllBatchSearchesAsCSV",
-    value: function listAllBatchSearchesAsCSV() {
+    key: "listAllBatchSearchesAsJSON",
+    value: function listAllBatchSearchesAsJSON() {
       for (var _len16 = arguments.length, args = new Array(_len16), _key16 = 0; _key16 < _len16; _key16++) {
         args[_key16] = arguments[_key16];
       }
@@ -329,12 +333,12 @@ function () {
           options = _splitArgsIntoOptions16.options,
           cb = _splitArgsIntoOptions16.cb;
 
-      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/csv', {}, API_KEY);
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/json', {}, API_KEY);
       return httpGet(url, options, cb, 'json');
     }
   }, {
-    key: "listBatchResultSets",
-    value: function listBatchResultSets() {
+    key: "listAllBatchSearchesAsCSV",
+    value: function listAllBatchSearchesAsCSV() {
       for (var _len17 = arguments.length, args = new Array(_len17), _key17 = 0; _key17 < _len17; _key17++) {
         args[_key17] = arguments[_key17];
       }
@@ -344,12 +348,12 @@ function () {
           options = _splitArgsIntoOptions17.options,
           cb = _splitArgsIntoOptions17.cb;
 
-      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/searches/csv', {}, API_KEY);
       return httpGet(url, options, cb, 'json');
     }
   }, {
-    key: "getBatchResultSet",
-    value: function getBatchResultSet() {
+    key: "listBatchResultSets",
+    value: function listBatchResultSets() {
       for (var _len18 = arguments.length, args = new Array(_len18), _key18 = 0; _key18 < _len18; _key18++) {
         args[_key18] = arguments[_key18];
       }
@@ -359,12 +363,12 @@ function () {
           options = _splitArgsIntoOptions18.options,
           cb = _splitArgsIntoOptions18.cb;
 
-      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results/' + args[1], {}, API_KEY);
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
       return httpGet(url, options, cb, 'json');
     }
   }, {
-    key: "getBatchResultSetAsCSV",
-    value: function getBatchResultSetAsCSV() {
+    key: "getBatchResultSet",
+    value: function getBatchResultSet() {
       for (var _len19 = arguments.length, args = new Array(_len19), _key19 = 0; _key19 < _len19; _key19++) {
         args[_key19] = arguments[_key19];
       }
@@ -373,6 +377,21 @@ function () {
           params = _splitArgsIntoOptions19.params,
           options = _splitArgsIntoOptions19.options,
           cb = _splitArgsIntoOptions19.cb;
+
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results/' + args[1], {}, API_KEY);
+      return httpGet(url, options, cb, 'json');
+    }
+  }, {
+    key: "getBatchResultSetAsCSV",
+    value: function getBatchResultSetAsCSV() {
+      for (var _len20 = arguments.length, args = new Array(_len20), _key20 = 0; _key20 < _len20; _key20++) {
+        args[_key20] = arguments[_key20];
+      }
+
+      var _splitArgsIntoOptions20 = splitArgsIntoOptionsAndCallback(args),
+          params = _splitArgsIntoOptions20.params,
+          options = _splitArgsIntoOptions20.options,
+          cb = _splitArgsIntoOptions20.cb;
 
       var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results/' + args[1] + '/csv', {}, API_KEY);
       return httpGet(url, options, cb, 'json');
@@ -433,7 +452,7 @@ function splitArgsIntoOptionsAndCallback(args) {
   };
 }
 
-function createUrlFromEndpointAndOptions(endpoint, options, apiKey, output) {
+function createUrlFromEndpointAndOptions(endpoint, options, apiKey, output, qsArgs) {
   var o = {};
 
   if (options != null) {
@@ -445,6 +464,15 @@ function createUrlFromEndpointAndOptions(endpoint, options, apiKey, output) {
 
   if (output != null) {
     o.output = output;
+  }
+
+  if (qsArgs != null) {
+    var _arr = Object.keys(qsArgs);
+
+    for (var _i = 0; _i < _arr.length; _i++) {
+      var argName = _arr[_i];
+      o[argName] = qsArgs[argName];
+    }
   }
 
   var query = qs.stringify(o);
