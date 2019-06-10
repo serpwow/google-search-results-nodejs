@@ -54,7 +54,7 @@ Simplest example for a standard query "pizza", returning the Google SERP (Search
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // #1. example using promises & async/await
 async function getResult() {
@@ -183,7 +183,7 @@ Example of a Google query geo-locating the query as if the user were located in 
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // retrieve the search results as JSON
 serpwow.json(
@@ -263,7 +263,7 @@ SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 /* 
   Set up parameters the query (q) and location parameters
@@ -313,7 +313,7 @@ To request that SerpWow renders the Google search results via a mobile or tablet
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // set up the mobile params
 var paramsMobile = {
@@ -369,7 +369,7 @@ When making a request via the ``json`` method an object is returned. You can ins
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // make a simple query, returning JSON
 serpwow.json({
@@ -402,7 +402,7 @@ Use the ``page`` and ``num`` parameters to paginate through Google search result
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // set number of results 
 let numberOfResults = 100;
@@ -430,7 +430,7 @@ serpwow.json({
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // set up a multiple search parameters, retrieving results as CSV (note the csv_fields param)
 serpwow.csv({
@@ -466,7 +466,7 @@ The [Locations API](https://serpwow.com/docs/locations-api/overview) allows you 
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // retrieve locations matching the query parameters as JSON
 serpwow.locations({
@@ -489,7 +489,7 @@ The [Account API](https://serpwow.com/docs/account-api) allows you to check your
 var SerpWow = require('google-search-results-serpwow')
 
 // create the serpwow object, passing in our API key
-let serpwow = new SerpWow('demo')
+let serpwow = new SerpWow('API_KEY')
 
 // get our account info
 serpwow.account()
