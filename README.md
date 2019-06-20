@@ -94,7 +94,7 @@ A snapshot (shortened for brevity) of the JSON response returned is shown below.
   },
   "search_metadata": {
     "id": "20c8e44e9cacedabbdff2d9b7e854436056d4f33",
-    "google_url": "https://www.google.com/search?q=pizza&oq=pizza&sourceid=chrome&ie=UTF-8",
+    "engine_url": "https://www.google.com/search?q=pizza&oq=pizza&sourceid=chrome&ie=UTF-8",
     "total_time_taken": 0.14
   },
   "search_parameters": {
