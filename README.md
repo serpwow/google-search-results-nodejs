@@ -258,7 +258,7 @@ serpwow.json(
 ```
 
 ## Returning results as JSON, HTML and CSV
-SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html`` and ``csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search-api/searches/csv-fields)) to request specific result fields.
+SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html`` and ``csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search-api/csv-fields)) to request specific result fields.
 ```javascript
 var SerpWow = require('google-search-results-serpwow')
 
