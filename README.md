@@ -202,7 +202,7 @@ serpwow.json(
 ```
 
 ## Searching Google Places, Google Videos, Google Images, Google Shopping and Google News
-Use the ``search_type`` param to search Google Places, Videos, Images and News. See the [Search API Parameters Docs](https://serpwow.com/docs/search-api/searches/parameters) for full details of the additional params available for each search type.
+Use the ``search_type`` param to search Google Places, Videos, Images and News. See the [Search API Parameters Docs](https://serpwow.com/docs/search-api/searches) for full details of the additional params available for each search type.
 ```javascript
 // perform a search on Google News, just looking at blogs, filtering out duplicates, ordered by date, in the last tear
 serpwow.json(
@@ -258,7 +258,7 @@ serpwow.json(
 ```
 
 ## Returning results as JSON, HTML and CSV
-SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html`` and ``csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search-api/csv-fields)) to request specific result fields.
+SerpWow can return data in JSON, HTML and CSV formats using the ``json``, ``html`` and ``csv`` methods. For CSV results use the ``csv_fields`` param ([docs](https://serpwow.com/docs/search-api/reference/csv-fields)) to request specific result fields.
 ```javascript
 var SerpWow = require('google-search-results-serpwow')
 
