@@ -41,9 +41,7 @@
   },
   "homepage": "https://github.com/serpwow/google-search-results-nodejs#readme",
   "dependencies": {
-    "@babel/core": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "node-fetch": "^2.2.0"
   },
   "devDependencies": {
