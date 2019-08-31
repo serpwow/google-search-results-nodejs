@@ -1,6 +1,6 @@
 {
   "name": "google-search-results-serpwow",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Google Search Results Node JS API via SerpWow.com",
   "main": "dist/index.js",
   "scripts": {
