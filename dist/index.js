@@ -363,7 +363,7 @@ function () {
           options = _splitArgsIntoOptions18.options,
           cb = _splitArgsIntoOptions18.cb;
 
-      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+      var url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results', {}, API_KEY);
       return httpGet(url, options, cb, 'json');
     }
   }, {
