@@ -123,7 +123,7 @@ class SerpWow {
 
   listBatchResultSets (...args) {
     const { params, options, cb } = splitArgsIntoOptionsAndCallback(args);
-    const url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
+    const url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/results', {}, API_KEY);
     return httpGet(url, options, cb, 'json');
   }
 
