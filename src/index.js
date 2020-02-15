@@ -67,6 +67,12 @@ class SerpWow {
     return httpGet(url, options, cb, 'json');
   }
 
+  stopBatch (...args) {
+    const { params, options, cb } = splitArgsIntoOptionsAndCallback(args);
+    const url = createUrlFromEndpointAndOptions('/live/batches/' + args[0] + '/stop', {}, API_KEY);
+    return httpGet(url, options, cb, 'json');
+  }
+
   deleteBatch (...args) {
     const { params, options, cb } = splitArgsIntoOptionsAndCallback(args);
     const url = createUrlFromEndpointAndOptions('/live/batches/' + args[0], {}, API_KEY);
