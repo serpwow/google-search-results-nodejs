@@ -271,7 +271,7 @@ function () {
           options = _splitArgsIntoOptions12.options,
           cb = _splitArgsIntoOptions12.cb;
 
-      var url = createUrlFromEndpointAndOptions('/live/batches', {}, API_KEY);
+      var url = createUrlFromEndpointAndOptions('/live/batches', params, API_KEY);
       return httpGet(url, options, cb, 'json');
     }
   }, {
